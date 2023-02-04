@@ -21,7 +21,7 @@ ifeq ($(OS),Linux)
 	LIB_BASE := $(BASENAME).so
 	LIB_MAJOR := $(BASENAME).so.$(MAJOR_VERSION)
 	LIB_VERSION := $(BASENAME).so.$(VERSION)
-	LINKER_FLAGS := -Wl,-soname,$(LIB_MAJOR)
+	LINKER_FLAGS := -Wl,-soname,$(LIB_VERSION)
 # Mac
 else ifeq ($(OS),Darwin)
 	LIB_BASE := $(BASENAME).dylib
